@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     QObject::connect(ui->calendarWidget, SIGNAL(clicked(QDate)), this, SLOT(switchToDayView(QDate)));
     QObject::connect(ui->backButton, SIGNAL(pressed()), this, SLOT(switchToMonthView()));
+    switchToMonthView();
 }
 
 /**
